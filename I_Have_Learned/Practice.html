@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML 연습"><!--웹페이지를 잘 설명하는 ??-->
+  <meta name="keywords" content="코딩,HTML"><!--이 웹페이지를 설명할수 있는 키워드-->
+  <meta name="author" content="Ppark"><!--웹페이지 저자에 관한 속성-->
+  <!--<meta http-equiv="refresh" content="">콘텐츠 수를 원하는데로 건들면
+  그 시간마다 새로고침이 됨-->
+  <title>프렉티스</title>
+  <style>
+    .img {
+      width: 150px;
+      height: 100px;
+  }
+  </style>
+  <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+
+
+</head>
+<body>
+   <h1>나혁이가 드디어 전설물고기를 뽑았어요!! 여러분 축하해 주세요!!</h1>
+  <img src="https://mblogthumb-phinf.pstatic.net/20141229_219/epooney_1419852247626w3pA2_GIF/465713_%282%29.gif?type=w2">
+ <br>개못하는 나혁이 ㅋ<!--그냥 줄넘김하는 코드 (한줄주석)-->
+ <p>개못하는 나혁이 ^_^</p>
+ <!--dvi>
+  공간을 둔 상태로 줄넘김
+
+
+  여러줄 주석처리하는 코드
+
+ </dvi-->
+ <img class="img" src="https://c.pxhere.com/photos/11/23/photo-73722.jpg!d" alt="환경사진">
+ <label for="name">Name (4 to 8 characters):</label>
+
+ <input type="text" id="name" name="name" required
+        minlength="4" maxlength="8" size="10">
+ <form>
+  아이디: <input type="text" name="usrname" required>
+  <input type="submit">
+ </form>
+ 
+ <table border="2">
+   <thead>
+     <tr>
+       <th>이름</th><th>성별</th><th>주소</th><th>세</th>
+     </tr>      
+    </thead> 
+    <tbody>
+      <tr>
+        <td>일이삼</td><td>man</td><td rowspan="2">address</td><td>1500</td>
+      </tr>
+      <tr>
+        <td>일삼이</td><td>girl</td><td>500</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <td colspan="3">합계</td><td>2000</td>
+    </tfoot>
+ </table>
+
+ <br>
+
+<form action="https://localhost/login.php">
+  <p>아이디 : <input type="text" name="id"></p>
+  <p>비밀번호 : <input type="password" name="pw"></p>
+  <input type="submit">
+</form>
+
+<form action="">
+  <p>text : <input type="text" name="id" value="defalut"></p>
+  <p>password : <input type="password" name="pwd" value="default"></p>
+  <p>textarea :
+    <textarea cols="20" rows="1">default value</textarea>
+  </p>
+</form>
+<form action="http://localhost/color.php">
+<h1>색상</h1>
+<select name="color">
+  <option value="red">붉은색</option>
+  <option value="black">검은색</option>
+  <option value="blue">파란색</option>
+</select>
+<h1>색상2(다중입력)</h1>
+<select name="color2" multiple>
+  <option value="red">붉은색</option>
+  <option value="black">검은색</option>
+  <option value="blue">파란색</option>
+</select>
+<input type="submit">
+</form>
+
+<form action="http://localhost/order.php">
+    <p>
+      <h1>색상(단일선택)</h1>
+      빨강 : <input type="radio" name="color" value="red">
+      검정 : <input type="radio" name="color" value="black" checked>
+      파랑 : <input type="radio" name="color" value="blue">
+    </p>
+    <p>
+      <h1>사이즈(다중선택)</h1>
+      95 : <input type="checkbox" name="size" value="95">
+      100 : <input type="checkbox" name="size" checked value="100">
+      105 : <input type="checkbox" name="size" checked value="105">
+    </p>  
+    <input type="submit">
+</form>
+<br>
+<form action="http://localhost/form.php" method="get"><!--기본적인 method 형태는 get 이다-->
+  <input type="text">
+  <input type="submit" value="전송">
+  <input type="button" value="버튼" onclick="alert('hello world')">
+  <input type="reset">
+</form>
+
+히든
+<form action="http://localhost/hidden.php">
+  <input type="text" name="id">
+  <input type="hidden" name="hide" value="egoing">
+  <input type="submit" value="버튼">
+</form>
+레이블
+
+<form action="http://practice/label.php">
+  <p>
+    <label for="id_txt">text</label> : 
+    <input id="id_txt" type="text" name="id" value="defalut"></p>
+  <p>
+    <label for="password">password</label> : 
+    <input id="password" type="password" name="pwd" value="default"></p>
+  <p>
+    <label for="comment">textarea</label> :
+    <textarea id="comment"cols="20" rows="1">default value</textarea>
+  </p>
+  <p> 
+    <label>
+    <input type="checkbox" name="color" value="red">붉은색
+    </label>
+    <label for="color_blue">
+      <input id="color_blue" type="checkbox" name="color" value="blue">파란색
+      </label>
+  </p>
+  <input type="submit">
+</form>
+--------
+메소드
+<form action="http://localhost/method.php" method="get">
+  <label>
+    id : 
+    <input type="text" name="id">
+  </label><br>
+  <label>
+    pw :
+    <input type="password" name="pwd">
+  </label>
+  <input type="submit">
+</form>
+<form action="http://localhost/method.php" method="post"><!--method를 post로 설정시 주소 뒤에 정보가 써지지 않음-->
+  <label>
+    id : 
+    <input type="text" name="id">
+  </label><br>
+  <label>
+    pw :
+    <input type="password" name="pwd">
+  </label>
+  <input type="submit">
+</form>
+
+파일 업로드
+<form action="http://localhost/upload.php" method="post"
+enctype="multipart/form-data"><!--꼭 이렇게 해야된다-->
+  <input type="file" name="profile">
+  <input type="submit">
+</form>
+
+<form action="form.php">
+  <input type="number">
+</form>
+
+
+
+
+
+</body>
+</html>

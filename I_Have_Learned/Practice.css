@@ -1,0 +1,4 @@
+.img:hover { /* image 클래스에 마우스 커서가 올라갔을때 */
+    transition-duration: 1s;
+    color: red
+}
