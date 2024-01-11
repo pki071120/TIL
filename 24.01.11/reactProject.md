@@ -33,7 +33,7 @@
 -- public에 직접 넣는 경우도 있는데 둘의 차이는 컴파일시에 필요한지의 여부임.<br> ex) `index.html`에서 사용하여 컴파일 단계 불필요 => public, 컴포넌트 내부에서 사용하여 컴파일 단계 필요 => assets
 - hooks<br>
 -- 커스텀 훅이 위치하는 폴더.
-- pages <br>
+- pages  
 -- react router등을 이용하여 라우팅을 적용할 때 페이지 컴포넌트를 이 폴더에 위치시킴.
 - constants<br>
 
