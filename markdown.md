@@ -14,22 +14,30 @@
 
 # 2. 마크다운 문법
 ## #1. 제목(Header)
-1. #뒤에 띄어쓰기를 넣어주는게 권장하는 방법 이다.
-2. <h1> ~ <h6> 까지 표현 가능하다.
+1. `#` 뒤에 띄어쓰기를 넣어주는게 권장하는 방법 이다.
+2. `<h1> ~ <h6>` 까지 표현 가능하다.
 
 ## #2. 줄바꿈
-- 띄어쓰기 2번 또는 <br/>로 표현 가능 하다.
+- 띄어쓰기 2번 또는 `<br/>`로 표현 가능 하다.
 
 ## #3. 수평선
 - 하기 코드들은 모두 수평선을 나타낸다. 가시적으로 페이지를 나누는 용도로 많이 사용된다.
 
 ## #4. 글자 강조
-**굵은 글씨**
-*이텔릭*
-_이텔릭_
-~~취소선~~
-<u>밑줄</u>
-ex)
+```
+**굵은 글씨**  
+*이텔릭*  
+_이텔릭_  
+~~취소선~~  
+<u>밑줄</u>  
+```
+**굵은 글씨**  
+*이텔릭*  
+_이텔릭_  
+~~취소선~~  
+<u>밑줄</u>   
+
+ex)  
 This is the **bold** text and this is the *italic* text and <u>let's</u> do ~~strikethrough~~
 
 ## #5. 인용문
@@ -38,9 +46,20 @@ This is the **bold** text and this is the *italic* text and <u>let's</u> do ~~st
 >>> 중첩된 인용문2
 
 ## #6. 목록
-1. 순서가 없는 목록 (*,+,- 지원)
+### 1. 순서가 없는 목록 (*,+,- 지원)
 
-### - bullet list
+#### - bullet list
+```
+- 순서가 필요하지 않은 목록
+  - 순서가 필요하지 않은 목록
+    - 순서가 필요하지 않은 목록
+* 순서가 필요하지 않은 목록
+  * 순서가 필요하지 않은 목록
+    *순서가 필요하지 않은 목록
++ 순서가 필요하지 않은 목록
+  + 순서가 필요하지 않은 목록
+    + 순서가 필요하지 않은 목록
+```
 - 순서가 필요하지 않은 목록
   - 순서가 필요하지 않은 목록
     - 순서가 필요하지 않은 목록
@@ -51,55 +70,101 @@ This is the **bold** text and this is the *italic* text and <u>let's</u> do ~~st
   + 순서가 필요하지 않은 목록
     + 순서가 필요하지 않은 목록
 
-2. 순서가 있는 목록
+### 2. 순서가 있는 목록
+```
+1. 순서가 필요한 목록  
+  1. 순서가 필요한 목록  
+  1. 순서가 필요한 목록
+  
+1. 순서가 필요한 목록
+
+1. 순서가 필요한 목록    
+  9. 순서가 필요한 목록  
+  3. 순서가 필요한 목록
+  
+8. 순서가 필요한 목록
+```
+  1. 순서가 필요한 목록  
+    1. 순서가 필요한 목록  
+    1. 순서가 필요한 목록
 
   1. 순서가 필요한 목록
-    1. 순서가 필요한 목록
-    1. 순서가 필요한 목록
-  1. 순서가 필요한 목록
 
-  1. 순서가 필요한 목록
-    9. 순서가 필요한 목록
+  1. 순서가 필요한 목록    
+    9. 순서가 필요한 목록  
     3. 순서가 필요한 목록
+    
   8. 순서가 필요한 목록
 
-3. 혼합 사용하는 예시
+### 3. 혼합 사용하는 예시
+```
+- 순서가 필요한 목록  
+  1.순서가 필요한 목록  
+  1.순서가 필요한 목록  
 
-- 순서가 필요한 목록
-  1.순서가 필요한 목록
-  1.순서가 필요한 목록
 - 순서가 필요하지 않은 목록2
-  1.순서가 필요한 목록
-  3.순서가 필요한 목록
-  8.순서가 필요한 목록
+  1.순서가 필요한 목록  
+  3.순서가 필요한 목록  
+  8.순서가 필요한 목록  
+```
+- 순서가 필요한 목록  
+  1.순서가 필요한 목록  
+  1.순서가 필요한 목록  
+
+- 순서가 필요하지 않은 목록2
+  1.순서가 필요한 목록  
+  3.순서가 필요한 목록  
+  8.순서가 필요한 목록  
 
 ## #7. 링크
-1. 기본방법
+1. 기본방법  
+```
 [Title](Link)
-ex) 여기를 클릭 -> [유튜브](https://youtube.com)
+```
+- ex) 여기를 클릭 -> [유튜브](https://youtube.com)
 
 2. 참조 링크 사용 방법
+```
 [link keyword][id]
 [id]:URL "Optional Title"
-ex) 여기를 클릭 -> [유튜브][youtube]
+```
+- ex) 여기를 클릭 -> [유튜브][youtube]
 [youtube]:https://youtube.com
-ex2 title 옵션사용시 커서를 링크 위로 위치하면, title이 노출된다.)
+- ex) title 옵션사용시 커서를 링크 위로 위치하면, title이 노출된다.
 여기를 클릭 -> [유튜브][youtube]
 [youtube]:https://youtube.com "Click here to youtube"
 
 ## #8. 이미지
 - 링크와 문법이 유사하다. 앞에 !만 추가하면 된다.
-1. 기본문법
+1. 기본문법   
+```
 ![대체텍스트](이미지주소)
+```
+```
 ex) ![youtube](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1280px-YouTube_social_white_square_%282017%29.svg.png)
-2. 참조 링크 사용 방법
+```
+![youtube](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1280px-YouTube_social_white_square_%282017%29.svg.png)
+
+2. 참조 링크 사용 방법  
+```
 :[대체텍스트][id]
 [id]: 이미지주소 "Optional TItle"
+```
+```
 ex) :[유튜브][youtube]
-[youtube]: https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1280px-YouTube_social_white_square_%282017%29.svg.png "youtube img"
-3. 이미지 노출과 동시에 링크처리
+[youtube]: https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1280px-YouTube_social_white_square_%282017%29.svg.png "youtube img"  
+``` 
+  :[유튜브][youtube]
+  [youtube]: https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1280px-YouTube_social_white_square_%282017%29.svg.png "youtube img"  
+
+3. 이미지 노출과 동시에 링크처리   
+```
 [![대체텍스트](이미지주소)](링크주소)
+```
+```
 ex) [![youtebe](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1280px-YouTube_social_white_square_%282017%29.svg.png)](https://youtube.com)
+```
+[![youtebe](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1280px-YouTube_social_white_square_%282017%29.svg.png)](https://youtube.com)
 
 ## #9. 표
 1. | 기호를 통해 테이블을 표현 가능. (가장 좌측, 우측 생략가능)
@@ -121,30 +186,34 @@ ex) `해당코드`는 강조할 부분 이다.
 2. 블럭 코드
 -``` html, css, jacascript, bash, plaintext 등등
   - 코드의 종류를 명시 하지 않은 경우
-  ex) ```
-    <a href="https://youtube.com" title="유튜브로 이동">유튜브로 이동</a>
+  ex)
   ```
+  <a href="https://youtube.com" title="유튜브로 이동">유튜브로 이동</a>
+  ```
+  
   - html
-  ex) ``` html
-    <a href="https://youtube.com" title="유튜브로 이동">유튜브로 이동</a>  
+  ``` html
+    <a href="https://youtube.com" title="유튜브로 이동">유튜브로 이동</a>
+    ```  
   ```
+
   - css
-  ex) ``` css
+  ``` css
   div{
     background-color:red;
   }
   ```
   - javascript
-  ex) ```javascript
+  ```javascript
   const name = "youtube"
   console.log(name);
   ```
   - bash
-  ex) ``` bash
+  ``` bash
   $ ls -al
   ```
   - 이외 텍스트
-  ex) ``` plaintext
+  ``` plaintext
   코드 이외의 텍스트들
   ```
 
