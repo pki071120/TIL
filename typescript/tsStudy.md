@@ -38,3 +38,45 @@ tsc를 이용하여 js파일을 만들때 세부사항(js버전, js파일 폴더
 ```
 npx create-react-app (프로젝트 이름) --template typescript
 ```
+
+## TS type 생성하기
+typescript 내에 있는 타입만 사용하는 것이 아닌, 타입도 자신이 만들수 있는데 기본문법법은
+``` ts
+type (name) = {
+
+}
+```
+이다.  
+또한, 다른 타입을 만들고 타입 내에서 타입을 또 지정해줄 수 있다.
+``` ts
+export type Restaurant/*name*/ = {
+  name: string;
+  category: string;
+  address: Address;
+  menu: Menu[];
+}
+
+export type Address = {
+  city: string;
+  detail: string;
+};
+
+export type Menu = {
+  name: string;
+  price: number;
+  category: string;
+};
+
+let data:Restaurant {
+  name: "장인초밥",
+  category: "sushi",
+  address: {
+    city: "guangju",
+    detail: "somewhere",
+  },
+  menu: [
+    { name: "tomato pasta", price: 2000, category: "pasta" },
+    { name: "oli pasta", price: 2500, category: "pasta" },
+  ],
+}
+```
