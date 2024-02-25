@@ -118,3 +118,18 @@ arrLength<string>(arr2); //4
 const arr3 = [true, false];
 arrLength<boolean>(arr3); //2
 ```
+
+## interface extends
+
+똑같은 타입이 포함될 때 타입을 포함시켜 다시 명시하지 않아도 사용할 수 있게 한다.
+
+```ts
+interface Sub extends MainType {
+  //작성하지 않아도 이 안에는 MainType의 내용이 작성되어있는 것과 같은 상태이다.
+  gender: string;
+}
+export type MainType {
+  Fname: string;
+  Sname: string;
+};
+```
