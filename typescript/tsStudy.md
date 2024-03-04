@@ -168,3 +168,4 @@ export type Type {
 export type SType = Pick<Type, 'Fname'>
 ```
 다른 타입에서 한가지 타입만 가져와서 사용하고 싶을때에 사용할 수 있다.
+
