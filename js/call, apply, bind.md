@@ -27,7 +27,7 @@
 
   update.call(mike, 1999, "singer");
 
-    console.lof(mike);//{name:"Mike", birthYear:1999, occupation:"singer"}
+  console.lof(mike);//{name:"Mike", birthYear:1999, occupation:"singer"}
 ```
 
 ## apply()
