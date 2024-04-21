@@ -119,17 +119,53 @@ const arr3 = [true, false];
 arrLength<boolean>(arr3); //2
 ```
 
-## interface extends
+## extends
 
 똑같은 타입이 포함될 때 타입을 포함시켜 다시 명시하지 않아도 사용할 수 있게 한다.
 
 ```ts
-interface Sub extends MainType {
+//인터페이스
+interface SubI extends MainType {
   //작성하지 않아도 이 안에는 MainType의 내용이 작성되어있는 것과 같은 상태이다.
   gender: string;
+}
+//타입
+type SubT = MainType {
+  age: number;
 }
 export type MainType {
   Fname: string;
   Sname: string;
 };
 ```
+## Omit
+``` ts
+export type Type {
+  Fname: string;
+  Sname: string;
+  age: number;
+};
+export type SType = Omit<Type, 'Sname'>
+```
+위와같이 Type의 Fname과 age는 필요하지만 Sname은 필요 없을때 Omit을 사용하여 제외시키고 만들 수 있다.
+``` ts
+export type Type {
+  Fname: string;
+  Sname: string;
+  age: number;
+};
+interface Asis extends Omit<Type, 'age'> 
+```
+위 코드와 같이 extends를 사용할때에도 사용할 수 있다.
+
+## Pick
+``` ts
+export type Type {
+  Fname: string;
+  Sname: string;
+  age: number;
+};
+export type SType = Pick<Type, 'Fname'>
+```
+다른 타입에서 한가지 타입만 가져와서 사용하고 싶을때에 사용할 수 있다.
+
